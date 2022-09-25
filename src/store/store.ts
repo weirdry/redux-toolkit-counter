@@ -1,4 +1,5 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import { useDispatch } from 'react-redux'
 import {
 	persistStore,
 	persistReducer,
@@ -18,6 +19,8 @@ const persistConfig = {
 	storage: storage,
 }
 
+export type RootState = ReturnType<typeof rootReducer>
+
 const rootReducer = combineReducers({
 	counter: counterReducer,
 })
@@ -34,5 +37,9 @@ export const store = configureStore({
 		}),
 	devTools: process.env.NODE_ENV !== 'production',
 })
+
+export type AppDispatch = typeof store.dispatch
+export type GetAppState = typeof store.getState
+// export const useAppDispatch: () => AppDispatch = useDispatch
 
 export const persistor = persistStore(store)

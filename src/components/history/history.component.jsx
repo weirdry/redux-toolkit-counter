@@ -6,11 +6,11 @@ import {
 	resetHistory,
 	restoreFromHistory,
 	removeFromHistory,
-} from '../../features/counter/counterSlice.js'
+} from '../../features/counter/counterSlice'
 
 import { Button } from 'cloz-ui'
 
-import { HistoryContainer } from './history.styles.js'
+import { HistoryContainer } from './history.styles'
 
 export default function History() {
 	const dispatch = useDispatch()
