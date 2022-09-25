@@ -40,6 +40,7 @@ export const store = configureStore({
 
 export type AppDispatch = typeof store.dispatch
 export type GetAppState = typeof store.getState
-// export const useAppDispatch: () => AppDispatch = useDispatch
+
+export const useAppDispatch: () => AppDispatch = useDispatch
 
 export const persistor = persistStore(store)

@@ -1,4 +1,5 @@
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { useAppDispatch } from '../../store/store'
 
 import {
 	calcCount,
@@ -13,7 +14,7 @@ import { Button } from 'cloz-ui'
 import { CounterContainer } from './counter.styles'
 
 export default function Counter() {
-	const dispatch = useDispatch()
+	const dispatch = useAppDispatch()
 
 	const { count } = useSelector(selectCounter)
 
