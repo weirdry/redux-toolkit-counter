@@ -7,7 +7,7 @@ import {
 	removeFromHistory,
 } from '../../features/counter/counterSlice'
 
-import { HistoryItemContainer } from './history-item'
+import { HistoryItemContainer } from './history-item.styles'
 
 type HistoryItemProps = {
 	count: Count
